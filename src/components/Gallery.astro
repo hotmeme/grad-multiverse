@@ -16,9 +16,10 @@ async function ImageFetcher(pattern: string) {
   return imageFiles
 }
 
-const imageFiles = await ImageFetcher('public/images/*.{jpg,,jpeg,png,webp}')
+const { title, description, photo_event } = Astro.props
 
-const { title, description } = Astro.props
+const imageFiles = await ImageFetcher(`public/images/${photo_event}/*.{jpg,,jpeg,png,webp}`)
+
 ---
 
 <div id="main">
