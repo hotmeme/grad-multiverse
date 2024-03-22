@@ -5,9 +5,10 @@ import Footer from '@/components/Footer.astro'
 import Gallery from '@/components/Gallery.astro'
 import ExternalScripts from '@/components/ExternalScripts.astro'
 
-let title = 'GR Adventures'
+let title = 'GR Adventures - Dev Gallery'
 let description =
-  'Behold.'
+  'You found the homepage. Nice!'
+let photo_event = 'dev'
 ---
 
 <!doctype html>
@@ -22,7 +23,7 @@ let description =
   <body class="is-preload">
     <Header title={title} />
     <Footer title={title} description={description} />
-    <Gallery title={title} description={description} />
+    <Gallery title={title} description={description} photo_event={photo_event} />
     <ExternalScripts />
   </body>
 </html>
